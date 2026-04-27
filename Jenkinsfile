@@ -20,8 +20,8 @@ pipeline {
         stage('Build Image') {
             steps {
                 sh '''
-                eval $(minikube docker-env)
-                docker build -t $IMAGE .
+                docker build -t mukeshkannam/service:v3 .
+                docker push mukeshkannam/service:v3
                 '''
             }
         }
