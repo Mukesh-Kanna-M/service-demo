@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    options {
+        skipDefaultCheckout(true)
+    }
+
     environment {
         IMAGE = "service:v3"
     }
@@ -9,7 +13,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git url: "https://github.com/Mukesh-Kanna-M/service-demo.git"
+                git branch: 'main', url: 'https://github.com/Mukesh-Kanna-M/service-demo.git'
             }
         }
 
