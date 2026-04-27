@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: service-container
-        image: service:v1 
-        imagePullPolicy: Never
+        image: mukeshkannam/service:v3
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
 
